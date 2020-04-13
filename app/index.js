@@ -1,9 +1,7 @@
+require('dotenv').config()
 const express = require('express')
-const { config } = require('dotenv')
 const routes = require('./router')
 const loggerMiddleware = require('./middleware/loggerMiddleware')
-
-config()
 
 const PORT = 3000
 const app = express()
