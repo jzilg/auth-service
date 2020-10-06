@@ -1,9 +1,9 @@
 const { verifyToken } = require('../provider/authentification')
 
 function verifyController(request, response) {
-    const isVeryfied = verifyToken(request.params.token)
+    const isVerified = verifyToken(request.params.token)
 
-    response.send(isVeryfied)
+    response.send(isVerified)
 }
 
 module.exports = verifyController
