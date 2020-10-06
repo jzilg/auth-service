@@ -1,40 +1,99 @@
 {
-  "root": true,
-  "env": {
-    "node": true
-  },
-  "extends": "airbnb-base",
-  "rules": {
-    "curly": ["error", "all"],
-    "indent": ["error", 4, {
-      "SwitchCase": 1
-    }],
-    "no-multiple-empty-lines": ["error", {
-      "max": 1,
-      "maxEOF": 1
-    }],
-    "no-plusplus": ["error", {
-      "allowForLoopAfterthoughts": true
-    }],
-    "semi": ["error", "never"],
-    "valid-jsdoc": ["error", {
-      "requireReturn": false,
-      "requireReturnType": true,
-      "requireReturnDescription": false,
-      "requireParamType": true,
-      "requireParamDescription": false,
-      "prefer": {
-        "return": "returns"
-      },
-      "preferType": {
-        "Null": "null",
-        "Undefined": "undefined",
-        "Number": "number",
-        "Boolean": "boolean",
-        "String": "string",
-        "array": "Array",
-        "object": "Object"
-      }
-    }]
-  }
+    "root": true,
+    "env": {
+        "node": true
+    },
+    "extends": "airbnb-base",
+    "rules": {
+        "curly": [
+            "error",
+            "all"
+        ],
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "no-multiple-empty-lines": [
+            "error",
+            {
+                "max": 1,
+                "maxEOF": 1
+            }
+        ],
+        "no-plusplus": [
+            "error",
+            {
+                "allowForLoopAfterthoughts": true
+            }
+        ],
+        "padding-line-between-statements": [
+            "error",
+            {
+                "blankLine": "always",
+                "prev": [
+                    "block-like",
+                    "const",
+                    "let"
+                ],
+                "next": "*"
+            },
+            {
+                "blankLine": "any",
+                "prev": [
+                    "const",
+                    "let"
+                ],
+                "next": [
+                    "const",
+                    "let"
+                ]
+            },
+            {
+                "blankLine": "always",
+                "prev": "*",
+                "next": [
+                    "block-like"
+                ]
+            },
+            {
+                "blankLine": "never",
+                "prev": [
+                    "case"
+                ],
+                "next": [
+                    "case",
+                    "default"
+                ]
+            }
+        ],
+        "semi": [
+            "error",
+            "never"
+        ],
+        "valid-jsdoc": [
+            "error",
+            {
+                "requireReturn": false,
+                "requireReturnType": true,
+                "requireReturnDescription": false,
+                "requireParamType": true,
+                "requireParamDescription": false,
+                "prefer": {
+                    "return": "returns"
+                },
+                "preferType": {
+                    "Null": "null",
+                    "Undefined": "undefined",
+                    "Number": "number",
+                    "Boolean": "boolean",
+                    "String": "string",
+                    "array": "Array",
+                    "object": "Object"
+                }
+            }
+        ]
+    }
 }
