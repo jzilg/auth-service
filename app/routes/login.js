@@ -1,7 +1,7 @@
 const express = require('express')
 const Joi = require('joi')
 const validate = require('../middleware/validateMiddleware')
-const { createToken } = require('../whatever/authentification')
+const { createToken } = require('../provider/authentification')
 
 const ROUTE = '/login'
 const router = express.Router()
